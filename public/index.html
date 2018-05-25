@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/5.0.3/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/5.0.3/firebase-auth.js"></script>
+    <script defer src="/__/firebase/5.0.3/firebase-database.js"></script>
+    <script defer src="/__/firebase/5.0.3/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/5.0.3/firebase-storage.js"></script>
+    <script defer src="/__/firebase/5.0.3/firebase-firestore.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="content">
+
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#washes">Washes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#addwash">Add wash</a>
+                    </li>
+                </ul>
+                <div class="form-inline">
+                    <label class="white" href="/#washes" id="username" style="color:white; margin-right: 10px"></label>
+                    <button class="btn btn-default" id="btnSignOut" onclick="signOut()" style="display: none;">signOut</button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="text-center">
+            <form class="form-signin" style="width: 100%;max-width: 330px;padding: 15px;margin: auto;">
+
+                <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+
+                <label for="inputEmail" class="sr-only">Email address</label>
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                <p></p>
+
+                <label for="inputPassword" class="sr-only">Password</label>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <p></p>
+
+                <button type="button" class="btn btn-primary btn-block" onclick="simpleLogin()">Login</button>
+                <button type="button" class="btn btn-primary btn-block" onclick="googleLogin()">Login with google</button>
+
+                <p class="mt-5 mb-3 text-muted"></p>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
